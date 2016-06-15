@@ -1,0 +1,35 @@
+default: &default
+  adapter: sqlite3
+  pool: 1
+  timeout: 5000
+
+development:
+  <<: *default
+  database: clicker_development
+
+test:
+  <<: *default
+  database: clicker_test
+
+production:
+  <<: *default
+  database: clicker_production
+
+# default: &default
+#   adapter: mysql2
+#   username: root
+#   password: root
+#   host: <%= ENV["IMUTN_DB_SERVICE_HOST"] %>
+#   port: 3306
+
+# development:
+#   <<: *default
+#   database: clicker_development
+
+# test:
+#   <<: *default
+#   database: clicker_test
+
+# production:
+#   <<: *default
+#   database: clicker_production

@@ -1,0 +1,11 @@
+.git/*
+.bundle/*
+.vagrant/*
+shared/*
+test/*
+README.rdoc
+Vagrantfile
+db/*.sqlite3
+db/*.sqlite3-journal
+._.DS_Store
+tmp/cache/*
