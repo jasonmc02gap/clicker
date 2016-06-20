@@ -1,5 +1,5 @@
 FROM ruby:2.2.0
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev imagemagick
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
 WORKDIR /tmp
 COPY Gemfile Gemfile
 COPY Gemfile.lock Gemfile.lock

@@ -1,0 +1,59 @@
+apiVersion: v1 # database pod
+kind: Pod
+metadata:
+  name: clicker-db-pod
+  labels:
+    app: db-pod-selector
+spec:
+  containers:
+    - name: db
+      image: mysql:5.6.22
+      env:
+        - name: MYSQL_USER
+          value: root
+        - name: MYSQL_ROOT_PASSWORD
+          value: root
+---- # database service to be exposed on the replication controller
+apiVersion: v1
+kind: Service
+metadata: 
+  name: clicker-db-svc
+spec: 
+  selector:
+    app: db-pod-selector
+  ports: 
+    - port: 3306 #external port, targetPort default is the same as port
+---- # replication controller with three pod replicas
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: clicker-webapp
+spec:
+  replicas: 3
+  selector:
+    app: webapp-rc-selector
+  template:
+    metadata:
+      name: webapp-rc-selector
+      labels:
+        app: webapp-rc-selector
+    spec:
+      containers:
+        - name: web
+          image: nginx:1.0
+        - name: app
+          image: ror:1.0
+          env:
+            - name: SECRET_KEY_BASE
+              value: neverDoThisPlease
+---- # repl controller to expose the replicas to internet
+apiVersion: v1
+kind: Service
+metadata: 
+  name: clicker-webapp-svc
+spec: 
+  selector: 
+    app: webapp-rc-selector
+  ports: 
+    - port: 9999 #external port
+      targetPort: 80 #internal port

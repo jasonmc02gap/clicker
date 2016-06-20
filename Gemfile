@@ -12,6 +12,5 @@ group :development do
   gem 'spring'
 end
 
-gem 'sqlite3'
-# gem 'mysql2', '~> 0.3.12'
-# gem 'puma', '~> 3.4.0'
+gem 'mysql2', '~> 0.3.12'
+gem 'puma', '~> 3.4.0'

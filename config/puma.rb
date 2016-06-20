@@ -7,7 +7,7 @@ threads 1, 1
 app_dir = File.expand_path("../..", __FILE__)
 
 # Default to production
-rails_env = ENV['RAILS_ENV'] || "production"
+rails_env = "development"
 environment rails_env
 
 # Set up socket location
