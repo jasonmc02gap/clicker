@@ -7,4 +7,5 @@ RUN bundle install
 RUN mkdir /imutn
 WORKDIR /imutn
 ADD . /imutn
-CMD ["bundle", "exec", "puma", "-Cconfig/puma.rb", "-btcp://127.0.0.1:3000"]
+EXPOSE 3000
+CMD ["bundle", "exec", "puma", "-Cconfig/puma.rb", "-btcp://0.0.0.0"]

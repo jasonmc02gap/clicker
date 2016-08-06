@@ -2,7 +2,7 @@ default: &default
   adapter: mysql2
   username: root
   password: root
-  host: <%= ENV["CLICKER_DB_SVC_SERVICE_HOST"] %>
+  host: db
   port: 3306
 
 development:
