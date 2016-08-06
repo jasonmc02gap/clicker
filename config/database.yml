@@ -1,18 +1,25 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
 default: &default
-  adapter: mysql2
-  username: root
-  password: root
-  host: <%= ENV["CLICKER_DB_SVC_SERVICE_HOST"] %>
-  port: 3306
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
 
 development:
   <<: *default
-  database: clicker_development
+  database: db/development.sqlite3
 
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: clicker_test
+  database: db/test.sqlite3
 
 production:
   <<: *default
-  database: clicker_production
+  database: db/production.sqlite3

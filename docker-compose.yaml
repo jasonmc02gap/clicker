@@ -1,8 +1,0 @@
-version: '2.0'
-services:
-  app:
-    build: .
-    image: ror:1.0
-  web:
-    build: ./config/nginx
-    image: nginx:1.0

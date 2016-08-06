@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.6'
+
+gem 'sqlite3'
 
 group :development, :test do
   gem 'byebug'
@@ -11,6 +13,3 @@ group :development do
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
-
-gem 'mysql2', '~> 0.3.12'
-gem 'puma', '~> 3.4.0'
