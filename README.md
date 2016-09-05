@@ -1,20 +1,37 @@
 # clicker
 
-this project helps to understand how to run a Rails aplication on a cluster build with Kubernetes and Docker containers
+This project helps to understand how to run a Rails application on a cluster build with Kubernetes and Docker containers
 
 ## Running the cluster
 
-1) first you need to configure the enviroment, that can be done with the script in the following repo:
+1) First you need to configure the environment, that can be done with the script in the following repo:
 
-[https://github.com/jasonmc02gap/g3]
+https://github.com/jasonmc02gap/g3
 
-2) when everthing is setup, is required to build the Docker images containing the project, that can be done with the following command 
+2) When everything is setup, is required build the Docker Images that contain the project, that can be done with the following command:
 
 ```
 $ sudo docker-compose build
 ```
-3) Afer the images are builded the cluster can be started with this command 
+
+3) After the images are builded, the cluster can be started with this command:
 
 ```
 $ kubectl create -f clicker-node.yml
 ```
+
+## I want more
+
+If you want to learn more details about the technologies, the project or other useful commands to manage the cluster, you can watch the following videos about this project:
+
+Docker introducction, project explanation and running the containers
+
+https://www.youtube.com/watch?v=3S51-UOMYDY
+
+Kubernetes introducction, project explanation and running the cluster
+
+https://www.youtube.com/watch?v=I5c_8ZDyJw8
+
+
+ty
+
