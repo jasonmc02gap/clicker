@@ -6,7 +6,7 @@ this project helps to understand how to run a Rails aplication on a cluster buil
 
 1) first you need to configure the enviroment, that can be done with the script in the following repo:
 
-<link>
+[https://github.com/jasonmc02gap/g3]
 
 2) when everthing is setup, is required to build the Docker images containing the project, that can be done with the following command 
 
