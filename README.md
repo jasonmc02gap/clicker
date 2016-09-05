@@ -24,13 +24,16 @@ $ kubectl create -f clicker-node.yml
 
 If you want to learn more details about the technologies, the project or other useful commands to manage the cluster, you can watch the following videos about this project:
 
-Docker introducction, project explanation and running the containers
+Docker introduction, project explanation and running the containers
 
 https://www.youtube.com/watch?v=3S51-UOMYDY
 
-Kubernetes introducction, project explanation and running the cluster
+
+
+Kubernetes introduction, project explanation and running the cluster
 
 https://www.youtube.com/watch?v=I5c_8ZDyJw8
+
 
 
 ty
